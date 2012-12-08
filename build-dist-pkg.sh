@@ -81,7 +81,7 @@ EOF
 	} | sed -e "s:${DISTDIR}/${dist}::" > ${MANIFESTDIR}/${dist}/+MANIFEST
 
 	# Create the package
-	pkg create -r ${DISTDIR}/${dist} -m ${MANIFESTDIR}/${dist} -o ${PKGDIR} ignored #ignored is due to pkg-create(8) bug
+	pkg create -r ${DISTDIR}/${dist} -m ${MANIFESTDIR}/${dist} -o ${PKGDIR}
 done
 
 echo $BUILDDIR
