@@ -17,6 +17,8 @@ CCACHE_PATH=/usr/local/libexec/ccache
 if [ -d ${CCACHE_PATH} ]; then
 	export CXX="${CCACHE_PATH}/world/c++"
 	export CC="${CCACHE_PATH}/world/cc"
+	# Fix building world when CC is clang
+	export CCACHE_CPP2=yes
 fi
 
 BUILDDIR=$(mktemp -d -t package)
